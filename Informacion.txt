@@ -1,0 +1,39 @@
+ESTADOS
+- Operador terniarion -
+const text = isFollowing ? 'siguiendo' : 'seguir';
+
+* Si isFollowing es true, entonces text tendrá el valor 'siguiendo'.
+* Si isFollowing es false, entonces text tendrá el valor 'seguir'.
+
+- PALABRAS RESERVADAS - 
+
+Bloque indica las llaves: {...}
+
+| Palabra clave | Descripción                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------- |
+| `var`         | Declara una variable con alcance de función (forma antigua, **no recomendada**).            |
+| `let`         | Declara una variable con alcance de bloque (recomendada para variables que pueden cambiar). |
+| `const`       | Declara una constante con alcance de bloque (su valor no puede cambiar).                    |
+
+
+| Palabra clave | Descripción                                                    |
+| ------------- | -------------------------------------------------------------- |
+| `function`    | Declara una función.                                           |
+| `class`       | Declara una clase (usada en programación orientada a objetos). |
+| `async`       | Declara una función asíncrona (se usa junto con `await`).      |
+| `import`      | Importa módulos en JavaScript moderno (ES6+).                  |
+| `export`      | Exporta variables, funciones o clases desde un módulo.         |
+
+
+| Palabra clave               | Uso                                                  |
+| --------------------------- | ---------------------------------------------------- |
+| `if`, `else`                | Condicionales.                                       |
+| `switch`, `case`, `default` | Condicional múltiple.                                |
+| `for`, `while`, `do`        | Bucles.                                              |
+| `return`                    | Devuelve un valor desde una función.                 |
+| `try`, `catch`, `finally`   | Manejo de errores.                                   |
+| `new`                       | Crea una instancia de un objeto o clase.             |
+| `typeof`                    | Devuelve el tipo de una variable.                    |
+| `instanceof`                | Verifica si un objeto es una instancia de una clase. |
+| `this`                      | Se refiere al objeto actual.                         |
+
