@@ -62,8 +62,9 @@ body {
 
 .tw-seguir.tw-siguiendo {
   background-color: red;
-  color: #fff;
+  color: #ffffff;
 }
+
 
 .tw-seguir:hover {
   background-color: #1991db;
@@ -71,4 +72,9 @@ body {
 
 .tw-seguir:active {
   background-color: #1576a4;
+}
+
+.tw-seguir.tw-siguiendo:hover {
+  background-color: rgb(119, 0, 0);
+  color: #ffffff;
 }

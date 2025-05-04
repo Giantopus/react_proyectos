@@ -23,13 +23,41 @@ export function App (){
 
     //Consejo 2:
     // Procurar que las props sean inmutables.
+
+    const users = [
+      {
+        name: 'JuanSv',
+        usuario: 'Juan Sabaleta',
+        isFollowing: false
+      },
+      {
+        name: 'ElenaVP',
+        usuario: 'Elena Pino',
+        isFollowing: true
+      },
+      {
+        name: 'DanielCC',
+        usuario: 'Daniel casado',
+        isFollowing: false
+      }
+    ]
     
   return(
     <>
     {/* EN LOS COMPONENTES SE PUEDEN PASAR FUNCIONES, NO SOLO DATOS */}
-      <Twitter arroba={formatArroba} usuario="Daniel Felipe Vargas" name="DanielV"/> 
-      <Twitter arroba={formatArroba} usuario="Daniel Felipe Vargass" name="DanielVs"/>
-      <Twitter arroba={formatArroba} usuario="Daniel Felipe Vargafs" name="DanielVf"/>
+      <Twitter initialfollowing arroba={formatArroba} usuario="Daniel Felipe Vargas" name="DanielV"/> 
+      <Twitter initialfollowing arroba={formatArroba} usuario="Daniel Felipe Vargass" name="DanielVs"/>
+      <Twitter initialfollowing={false} arroba={formatArroba} usuario="Daniel Felipe Vargafs" name="DanielVf"/>
+    
+    { //OJO, LAS FUNCIONES DE JS, deben ir dentro de {}
+      users.map(user => { //Users en un arreglo y .map una funcion para recorrer el arreglo y devuelve uno nuevo transformado, cada arreglo pequeño se llama user
+        const {name, usuario, isFollowing} = user; //desestructura el arreglo principal: const name = user.name; const usuario = user.usuario;
+        return(
+          <Twitter key={name} initialfollowing={isFollowing} arroba={formatArroba} usuario={usuario} name={name}/> 
+        )
+       }) 
+    }
     </>
+
   )
 }

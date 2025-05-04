@@ -1,9 +1,10 @@
 import { useState } from "react"
 
-export function Twitter ({arroba, usuario, name}){ //se pueden dar valores preseteados, por ejemplo usuario='unknown'
+export function Twitter ({initialfollowing, arroba, usuario, name}){ //se pueden dar valores preseteados, por ejemplo usuario='unknown'
 
-  const [isFollowing, setIsFollowing] = useState(false)
-  const manejarClick = () => {
+  const [isFollowing, setIsFollowing] = useState(initialfollowing) // OJO, Cuando se renderiza un componente padre, tambien se renderiza el children
+  //OJO, El estado inicial, solo se inicializa 1 vez, es decir, si se usa el isFollowing como prop solo se inicia una vez, asi cambie de estado en otro lado
+  const manejarClick = () => { //Cuando no hay cambios en demas componentes, se renderiza pero no se actualiza el DOM
     setIsFollowing(!isFollowing)
   }
 
