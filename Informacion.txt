@@ -37,3 +37,12 @@ Bloque indica las llaves: {...}
 | `instanceof`                | Verifica si un objeto es una instancia de una clase. |
 | `this`                      | Se refiere al objeto actual.                         |
 
+REST Y SPREAD
+
+| Si estás tomando varios elementos y agrupándolos → rest (lado izquierdo) |
+const [primero, ...resto] = [1, 2, 3];
+// resto = [2, 3]
+
+| Si estás poniendo varios elementos y expandiéndolos → spread (lado derecho) |
+const arr = [1, 2, 3];
+const nuevoArr = [...arr]; // copia
